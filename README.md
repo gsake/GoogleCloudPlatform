@@ -1,2 +1,1 @@
-# GoogleCloudPlatform
-Repository for GCP deployments
+# Deployment Manager
