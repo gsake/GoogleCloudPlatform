@@ -1,0 +1,15 @@
+imports:
+- path: kubernetes_engine.py
+- path: kubernetes_engine_apis.py
+
+resources:
+- name: cluster
+  type: kubernetes_engine.py
+  properties:
+    CLUSTER_NAME: test-gke
+    CLUSTER_ZONE: us-central1-c
+    NUM_NODES: 1
+- name: types
+  type: kubernetes_engine_apis.py
+  properties:
+    endpoint: $(ref.cluster.endpoint)
