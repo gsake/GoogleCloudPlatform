@@ -12,14 +12,20 @@ Using Deployment Manager to deploy Kubernetes resources into a new GKE cluster i
 
 1. Create the GKE Cluster resources and Types
 
-NAME=appt-cluster-resources
-
+```NAME=appt-cluster-resources
 gcloud deployment-manager deployments create ${NAME} --config=cluster-resources.yaml
+```
 
 2. Deploy the Service and Workloads
 
-NAME=app-cluster-deployment
-
+```NAME=app-cluster-deployment
 gcloud deployment-manager deployments create ${NAME} --config=app-resources.yaml
+```
 
+## Additional Resources
 
+### Kubernetes API
+
+[Kubernetes Deployment API](https://kubernetes.io/docs/reference/kubernetes-api/workloads-resources/deployment-v1/#create-create-a-deployment)
+
+[Kubernetes Service API](https://kubernetes.io/docs/reference/kubernetes-api/services-resources/service-v1/#create-create-a-service)
